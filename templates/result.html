@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles1.css') }}">
+  </head>
+  <body>
+    <h1>Sentiment Analysis Result</h1>
+    <p>Sentiment: {{ sentiment }}</p>
+    {% if sentiment == 'positive' %}
+      <img src="{{ url_for('static', filename='smile.gif') }}" alt="Positive sentiment" width="20%" height="20%" class="my-image">
+    {% elif sentiment == 'negative' %}
+      <img src="{{ url_for('static', filename='cry.gif') }}" alt="Negative sentiment" width="20%" height="20%" class="my-image">
+    {% endif %}
+  </body>
+</html>
